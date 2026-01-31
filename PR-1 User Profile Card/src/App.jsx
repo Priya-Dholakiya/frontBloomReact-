@@ -46,7 +46,6 @@ function App() {
 
   return (
     <div className="container">
-      {/* 🔥 YAHIN component CALL ho raha hai */}
       {users.map((user, index) => (
         <UserProfileCard
           key={index}

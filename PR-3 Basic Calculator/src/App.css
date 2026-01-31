@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* Center container */
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #eaf2ff, #dbeafe);
+}
+
+/* Calculator box */
+.calculator {
+  width: 340px; /* ⬅️ thoda bada, balanced */
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 22px;
+  box-shadow:
+    0 20px 40px rgba(37, 99, 235, 0.25);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px; /* ⬅️ spacing improve */
+}
+
+/* Display */
+.calculator input {
+  grid-column: span 4;
+  height: 64px;
+  border-radius: 14px;
+  border: none;
+  padding: 12px 14px;
+  font-size: 24px;
+  text-align: right;
+  background: #f1f5ff;
+  color: #1e3a8a;
+  outline: none;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Common button */
+button {
+  height: 56px;              /* ⬅️ bigger buttons */
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #e0eaff;
+  color: #1e40af;
+  transition: all 0.15s ease;
+}
+
+button:hover {
+  background: #c7dbff;
+  transform: translateY(-1px);
+}
+
+/* Operator buttons */
+.op {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.op:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
+
+/* Equal button */
+.equal {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  font-weight: 600;
+}
+
+.equal:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
