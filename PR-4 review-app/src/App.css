@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* main container */
+.main {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* form box */
+.box {
+  width: 420px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* form */
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviewForm button {
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reviewForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* floating input */
+.inputBox {
+  position: relative;
+}
+
+.inputBox input,
+.inputBox textarea,
+.inputBox select {
+  width: 100%;
+  padding: 14px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.inputBox label {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  background: white;
+  padding: 0 5px;
+  color: #777;
+  font-size: 14px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+/* floating effect */
+.inputBox input:focus + label,
+.inputBox input:not(:placeholder-shown) + label,
+.inputBox textarea:focus + label,
+.inputBox textarea:not(:placeholder-shown) + label,
+.inputBox select:focus + label,
+.inputBox select:not([value=""]) + label {
+  top: -8px;
+  font-size: 12px;
+  color: #667eea;
+}
+
+/* error text */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* review cards grid */
+.reviewSection {
+  max-width: 1400px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card span {
+  font-weight: bold;
+  color: #667eea;
+}
+
+/* ===================== */
+/* RESPONSIVE BREAKPOINTS */
+/* ===================== */
+
+/* laptop */
+@media (max-width: 1200px) {
+  .reviewSection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .reviewSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  .reviewSection {
+    grid-template-columns: 1fr;
+  }
+}
