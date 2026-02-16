@@ -1,0 +1,90 @@
+.best-shops-section {
+  background: #f2f2f2;
+  padding: 100px 0;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+.big-title {
+  font-size: 72px;
+  font-weight: 700;
+  color: #e30016;
+  line-height: 1.05;
+  font-family: "Playfair Display", serif;
+}
+.text-block p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #111;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.small-icon {
+  position: absolute;
+  right: 10px;
+  bottom: -30px;
+  width: 90px;
+  opacity: 0.9;
+}
+.bottom-line {
+  border-bottom: 3px dashed #e30016;
+  margin-top: 80px;
+  position: relative;
+}
+.top-btn {
+  position: absolute;
+  right: 0;
+  bottom: -22px;
+  background: #e30016;
+  border: none;
+  padding: 6px 16px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+.summer-card {
+  height: 310px;
+  overflow: hidden;
+  position: relative;
+}
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.summer-card:hover img {
+  transform: scale(1.1);
+}
+.overlay-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+  z-index: 2;
+}
+
+.big-text {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.small-text {
+  font-size: 18px;
+  font-style: italic;
+}
+.bottom-line {
+  border-bottom: 2px dashed #e30016;
+  margin: 60px auto 0;
+  width: 90%;
+}
