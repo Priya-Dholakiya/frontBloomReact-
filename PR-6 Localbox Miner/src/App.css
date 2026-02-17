@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f2f5fa;
+}
+
+/* MAIN LAYOUT */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 380px;
+  background: linear-gradient(160deg, #5f2cff, #a24cff);
+  padding: 40px 30px;
+  color: white;
+  position: relative;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.left-panel h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* INPUT STYLE */
+.left-panel .form-control,
+.left-panel .form-select {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* PLACEHOLDER */
+.left-panel .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* FOCUS EFFECT */
+.left-panel .form-control:focus,
+.left-panel .form-select:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+  color: white;
+}
+
+/* DROPDOWN OPTIONS (when opened) */
+.left-panel .form-select option {
+  background: white;
+  color: #333;
+}
+
+/* SUBMIT BUTTON */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: white;
+  color: #6a3dff;
+  font-weight: 600;
+  border: none;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #f1f1f1;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  flex: 1;
+  padding: 40px;
+}
+
+.right-panel h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* CARD GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* EMPLOYEE CARD */
+.emp-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.emp-card:hover {
+  transform: translateY(-8px);
+}
+
+.emp-card img {
+  height: 190px;
+  object-fit: cover;
+}
+
+.emp-card .card-body {
+  text-align: center;
+}
+
+.emp-card .card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.emp-card .card-text {
+  font-size: 14px;
+  color: #666;
+}
+
+/* BUTTONS */
+.btn-group-custom {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-group-custom .btn {
+  flex: 1;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    border-radius: 0;
+  }
+}
