@@ -1,12 +1,8 @@
 import "./Header.css";
 import { Navbar, Nav, Container, Badge } from "react-bootstrap";
-import {
-  FiSearch,
-  FiHeart,
-  FiShoppingBag,
-  FiMoon
-} from "react-icons/fi";
+import { FiSearch, FiHeart, FiShoppingBag, FiMoon } from "react-icons/fi";
 import { FaBolt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -35,8 +31,9 @@ const Header = () => {
             </Nav>
 
             <div className="d-flex align-items-center gap-3 fs-5">
-
-              <button className="add-product-btn">Add product</button>
+              <Link to="/add" className="btn btn-primary add-product-btn">
+                Add product
+              </Link>
               <FiSearch className="nav-icon" />
 
               {/* <FiMoon className="nav-icon" /> */}
@@ -45,14 +42,8 @@ const Header = () => {
 
               <div className="position-relative">
                 <FiShoppingBag className="nav-icon" />
-                <Badge
-                  bg="danger"
-                  pill
-                  className="cart-badge"
-                >
-                </Badge>
+                <Badge bg="danger" pill className="cart-badge"></Badge>
               </div>
-
             </div>
           </Navbar.Collapse>
         </Container>
