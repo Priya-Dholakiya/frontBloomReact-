@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar, Container, Nav, NavDropdown, Form, Button} from 'react-bootstrap';
 
-const header = () => {
+const Header = () => {
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -46,4 +46,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

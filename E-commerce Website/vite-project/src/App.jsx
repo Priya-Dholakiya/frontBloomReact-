@@ -1,10 +1,13 @@
-import { useState } from 'react'
-import {header} from './components/header'
+import Header from './components/header'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
+function App() {
   return (
     <>
-      <header />
+      <Header />
     </>
   )
+}
+
 export default App
