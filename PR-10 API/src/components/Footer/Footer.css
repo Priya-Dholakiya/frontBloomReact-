@@ -1,0 +1,115 @@
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.form-control::placeholder{
+  color: #9ca3af;
+}
+
+.form-control:focus,
+.form-control:focus-visible{
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--primary-color);
+}
+
+.newsletter-section {
+  background: #f3f4f6;   
+}
+
+.newsletter-section h5 {
+  font-size: 18px;
+  color: var(--black);
+}
+
+.newsletter-section p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.newsletter-section .form-control {
+  max-width: 280px;
+}
+
+.subscribe-btn {
+  background: var(--primary-color);
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--border-radius);
+  color: var(--white);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.subscribe-btn:hover {
+  background: var(--primary-hover);
+}
+
+
+.footer-wrapper {
+  background: var(--white);
+}
+
+.logo-icon {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.footer-wrapper p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.footer-links li:hover {
+  color: var(--primary-color);
+}
+
+
+.social-icons svg {
+  font-size: 16px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.social-icons svg:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  border-top: 1px solid #e5e7eb;
+  background: var(--white);
+  font-size: 14px;
+}
+
+.footer-bottom span {
+  color: #6b7280;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.footer-bottom span:hover {
+  color: var(--primary-color);
+}

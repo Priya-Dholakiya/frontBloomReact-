@@ -1,0 +1,100 @@
+  :root {
+    --primary-color: #ff5a00;
+    --primary-hover: #e24f00;
+    --secondary-bg: #f1f1f1;
+    --light-bg: #fafafa;
+    --icon-hover-bg: #ebe7e7;
+
+    --white: #ffffff;
+    --black: #000000;
+    --text-color: #333333;
+
+    --border-radius: 6px;
+    --transition: 0.3s;
+  }
+
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui , sans-serif;
+    color: var(--text-color);
+    background: #fff;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .align-center {
+    align-items: center;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .gap-10 {
+    gap: 10px;
+  }
+
+  .gap-20 {
+    gap: 20px;
+  }
+
+  .nav-icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .nav-icon:hover {
+    color: var(--primary);
+  }
+
+  .primary-btn {
+    background: var(--primary);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+  }
+
+  .primary-btn:hover {
+    background: #e63e3e;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    font-size: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }

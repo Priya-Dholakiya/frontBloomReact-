@@ -1,0 +1,48 @@
+.topbar{
+  background: var(--primary-color);
+  color: var(--white);
+  font-size:14px;
+}
+
+.logo-icon{
+  background: var(--primary-color);
+  color: var(--white);
+  padding:8px;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+}
+
+.nav-icon{
+  cursor:pointer;
+  transition:var(--transition);
+  /* padding:5px; */
+  border-radius:var(--border-radius);
+}
+
+.nav-icon:hover{
+  background-color:var(--icon-hover-bg);
+}
+
+.cart-badge{
+  position:absolute;
+  top:-8px;
+  right:-10px;
+  font-size:10px;
+}
+
+.add-product-btn{
+  background-color:var(--light-bg);
+  color:var(--black);
+  border:none;
+  padding:6px 14px;
+  font-size:14px;
+  border-radius:var(--border-radius);
+  transition:var(--transition);
+}
+
+.add-product-btn:hover{
+  background-color:var(--primary-color);
+  color:var(--white);
+  transform:translateY(-2px);
+}
