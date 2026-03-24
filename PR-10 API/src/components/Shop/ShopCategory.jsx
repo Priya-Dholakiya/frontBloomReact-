@@ -1,51 +1,23 @@
-import { Container, Row, Col, Card, Badge } from "react-bootstrap";
-import runImg from "../../assets/image/imgi_2_photo-1542291026-7eec264c27ff.jpg";
-import sneakerImg from "../../assets/image/imgi_3_photo-1549298916-b41d501d3772.jpg";
-import basketImg from "../../assets/image/imgi_4_photo-1579338559194-a162d19bf842.jpg";
-import casualImg from "../../assets/image/imgi_5_photo-1525966222134-fcfa99b8ae77.jpg";
-import bootsImg from "../../assets/image/imgi_6_photo-1638247025967-b4e38f787b76.jpg";
-import sandalImg from "../../assets/image/imgi_7_photo-1603487742131-4160ec999306.jpg";
-import "./shopCategory.css";
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { getCategories } from '../../utils/productActions';
+import "./ShopCategory.css";
 
-const categories = [
-  {
-    title: "Running",
-    products: 48,
-    desc: "Performance shoes built for speed and endurance",
-    img: runImg,
-  },
-  {
-    title: "Sneakers",
-    products: 86,
-    desc: "Classic and contemporary streetwear styles",
-    img: sneakerImg,
-  },
-  {
-    title: "Basketball",
-    products: 32,
-    desc: "Court-ready shoes with superior ankle support",
-    img: basketImg,
-  },
-  {
-    title: "Casual",
-    products: 64,
-    desc: "Everyday comfort meets effortless style",
-    img: casualImg,
-  },
-  {
-    title: "Boots",
-    products: 28,
-    desc: "Rugged style for any terrain",
-    img: bootsImg,
-  },
-  {
-    title: "Sandals",
-    products: 24,
-    desc: "Breathable comfort for warmer days",
-    img: sandalImg,
-  },
-];
+
 const ShopCategory = () => {
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getCategories().then(data => {
+      setCategories(data);
+      setLoading(false);
+    }).catch(() => setLoading(false));
+  }, []);
+
+  if (loading) return <Container><p>Loading categories...</p></Container>;
+  if (categories.length === 0) return <Container><p>No categories yet. Add products!</p></Container>;
+
   return (
     <section className="category-section">
       <Container>
@@ -62,15 +34,15 @@ const ShopCategory = () => {
 
         <Row>
           {categories.map((item, index) => (
-            <Col xs={12} md={6} lg={4} key={index} className="mb-4">
+            <Col xs={12} md={6} lg={4} key={item.title || index} className="mb-4">
               <Card className="category-card">
                 <div className="img-wrapper">
-                  <Card.Img src={item.img} />
+                  <Card.Img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt={item.title} />
                 </div>
 
                 <div className="overlay">
                   <h4>{item.title}</h4>
-                  <p>{item.desc}</p>
+                  <p>{item.products} products • Perfect for {item.title.toLowerCase()}</p>
                   <span className="shop-link">Shop Now →</span>
                 </div>
               </Card>

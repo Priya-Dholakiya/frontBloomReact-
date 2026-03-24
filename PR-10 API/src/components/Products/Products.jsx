@@ -34,7 +34,7 @@ const Products = () => {
 
   useEffect(() => {
     loadProducts();
-    fetch(`${API_BASE}/products`, { method: 'HEAD' })
+    fetch(`${API_BASE}/api/products`, { method: 'HEAD' })
       .then(() => setApiStatus('🟢 LIVE'))
       .catch(() => setApiStatus('🟡 Offline (localStorage)'));
   }, []);

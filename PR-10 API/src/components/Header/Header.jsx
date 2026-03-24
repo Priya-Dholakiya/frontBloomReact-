@@ -22,10 +22,9 @@ const Header = () => {
           <Navbar.Toggle />
 
           <Navbar.Collapse>
-            <Nav className="mx-auto gap-4">
-              <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
+<Nav className="mx-auto gap-4">
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
               <Nav.Link as={Link} to="/categories">Categories</Nav.Link>
-              <Nav.Link as={Link} to="/new-arrivals">New Arrivals</Nav.Link>
               <Nav.Link as={Link} to="/sale">Sale</Nav.Link>
               <Nav.Link as={Link} to="/about">About</Nav.Link>
               <Nav.Link as={Link} to="/products">Products</Nav.Link>
