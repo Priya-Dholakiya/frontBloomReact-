@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    padding: 0px;
+}
+
+.book-banner-section{
+    background-color: #fffaed;
+    padding: 0px !important;
+    padding: 150px 0px !important;
+    position: relative;
+
+}
+
+.book-banner-content {
+    text-align: left;
+    padding: 0px 20px 0px;
+}
+
+.book-banner-content h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.book-banner-content p {
+    font-size: 1.5rem;
+   color: #7c7c7b;
+}
+
+.banner-onion-image {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    top: 10%;
+    right: 30%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.banner-banner-leaf-image {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    right: 0%;
+    top: 15%;
+    width: 100px;
+}
+
+.banner-tamato-image {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    right: 10%;
+    bottom: 10%;
+    width: 100px;
+    object-fit: contain;
+}
+
+.book-banner-menu{
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    font-size: 1.5rem;
+}

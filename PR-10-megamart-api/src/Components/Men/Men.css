@@ -1,0 +1,55 @@
+.mens-section {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.sidebar {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.men-card {
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.men-card::-webkit-scrollbar {
+    display: none;
+}
+
+.men-card {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mens-card {
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.men-card-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.Delete-button{
+    font-size: 1.5rem;
+    color: red; 
+}
+.Edit-button{
+    color: green;
+    font-size: 1.5rem;
+}
