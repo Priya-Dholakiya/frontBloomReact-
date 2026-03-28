@@ -1,0 +1,96 @@
+.mens-section {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.sidebar {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.men-card {
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.men-card::-webkit-scrollbar {
+    display: none;
+}
+
+.men-card {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mens-card {
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.men-card-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+
+.action-buttons button {
+  border: none;
+  outline: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+
+.btn-edit {
+  background: linear-gradient(135deg, #2196f3, #6dd5fa);
+}
+.btn-edit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(33, 150, 243, 0.4);
+}
+
+
+.btn-delete {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+.btn-delete:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 75, 43, 0.4);
+}
+
+
+.mens-card {
+  transition: all 0.3s ease;
+}
+.mens-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+

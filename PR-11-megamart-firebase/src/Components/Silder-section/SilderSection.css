@@ -1,0 +1,167 @@
+/* SliderSection.css - import this in the component */
+
+.value-slider-section {
+  background: #070707; /* black background like screenshot */
+  padding: 28px 0 36px;
+  color: #fff;
+}
+
+/* container helper - you might already have .container in Bootstrap */
+.value-slider-inner.container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* title */
+.slider-title {
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+/* viewport: holds arrows and track */
+.slider-viewport {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* arrows */
+.arrow {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 30;
+  transition: transform .12s ease, background .12s ease;
+}
+.arrow:hover { transform: translateY(-3px); background: rgba(255,255,255,0.04); }
+
+/* track wrapper - hides overflow */
+.slider-track-wrap {
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+
+/* track - flex container of slides */
+.slider-track {
+  display: flex;
+  align-items: stretch;
+  transition: transform 450ms cubic-bezier(.22,.9,.34,1);
+  will-change: transform;
+}
+
+/* each card */
+.slide-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fff 0%, #f8f8f8 100%);
+  color: #111;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  min-width: 260px; /* baseline for when JS hasn't set width */
+}
+
+/* product image area */
+.card-image {
+  background: #efe8df !important;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: white !important; */
+  
+}
+.card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  
+}
+
+/* bottom strip with discount and button */
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  background: #fff;
+  gap: 10px;
+}
+.card-left {
+  flex: 1 1 60%;
+}
+.card-sub {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* SHOP NOW pill */
+.shop-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 96px;
+  display: inline-block;
+  text-align: center;
+}
+.shop-btn:hover { transform: translateY(-3px); }
+
+/* dots */
+.dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  cursor: pointer;
+}
+.dot.active {
+  background: #ddd;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* responsive tweaks */
+@media (max-width: 1000px) {
+  .card-image { height: 240px; }
+  .slide-card { min-width: 220px; }
+}
+@media (max-width: 600px) {
+  .card-image { height: 220px; }
+  .shop-btn { padding: 8px 12px; min-width: 72px; font-size: 0.9rem; }
+  .arrow { width: 36px; height: 36px; }
+}
+
+/* optional: make arrows hide on small screens or style differently */
+@media (max-width: 480px) {
+  .arrow { display: none; }
+}

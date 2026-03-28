@@ -1,0 +1,173 @@
+.signin-form{
+  /* background-color: rgb(230, 230, 230); */
+  /* padding: 100px; */
+  display: inline-block;
+}
+/* Container card */
+.auth-card {
+  /* background: #fff; */
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(22, 45, 77, 0.08);
+  overflow: hidden;
+  max-width: 920px;
+  margin-top: 10px;
+}
+
+/* left image */
+.hero-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+}
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 420px;
+}
+
+/* right panel */
+.form-panel {
+  padding: 36px 32px;
+  background: transparent;
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* labels & inputs */
+.form-label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #6b6b6b;
+  font-weight: 500;
+}
+
+.input-wrap {
+  position: relative;
+}
+.signin-form .form-control {
+  border-radius: 6px;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+}
+
+/* error text */
+.error {
+  display: block;
+  color: #d93025;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* remember checkbox */
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  color: #4d4d4d;
+  font-size: 14px;
+}
+
+/* primary button like screenshot (soft blue) */
+.btn-main {
+  background-color: #63a4ff;
+  border-color: #63a4ff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+/* "Or login with" divider */
+.or-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #888;
+  justify-content: center;
+}
+.or-line::before,
+.or-line::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+/* social buttons */
+.socials { justify-content: center; }
+.social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.social-btn.fb { background:#3b5998; color:#fff; }
+.social-btn.tw { background:#1da1f2; color:#fff; }
+.social-btn.gg { background:#db4437; color:#fff; }
+
+/* responsive behavior */
+@media (max-width: 767.98px) {
+  .auth-card { border-radius: 10px; }
+  .hero-wrap { display: none; } /* hide image on small devices like screenshot central form */
+  .form-panel { padding: 24px; }
+}
+
+/* make form full width, stacked inputs */
+.fullwidth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullwidth-form .form-group {
+  width: 100%;
+}
+
+.fullwidth-form .form-label {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.fullwidth-form .form-control {
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.fullwidth-form .form-control:focus {
+  border-color: #63a4ff;
+  outline: none;
+}
+
+/* maintain responsive layout */
+@media (max-width: 767.98px) {
+  .fullwidth-form {
+    padding: 0;
+  }
+  .form-panel {
+    padding: 24px;
+  }
+}
+
