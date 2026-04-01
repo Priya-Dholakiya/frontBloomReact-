@@ -2,18 +2,21 @@ import { useEffect, useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router";
-import { SignInAsync, SingInGoogleAsync } from "../Services/Action/Authentication";
-import './SignIn.css'
+import {
+  signInWithEmailPassword,
+  signInWithGoogle,
+} from "../../Service/Action/AuthAction/AuthAction";
+import "./SignIn.css";
 
 const SignIn = () => {
-
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
-    const { user, errMsg } = useSelector(state => state.AuthReducer)
-    const [InputForm, setInputForm] = useState({
-        email: "",
-        password: ""
-    })
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user, isError } = useSelector((state) => state.AuthReducer);
+  const [InputForm, setInputForm] = useState({
+    email: "",
+    password: "",
+  });
+  const [formErrors, setFormErrors] = useState({});
 
     const handlechange = (e) => {
         const { name, value } = e.target;
@@ -23,23 +26,32 @@ const SignIn = () => {
         })
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(InputForm);
-        dispatch(SignInAsync(InputForm))
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    const errors = {};
+    if (!InputForm.email) errors.email = "Email is required";
+    if (!InputForm.password) errors.password = "Password is required";
+    setFormErrors(errors);
+
+    if (Object.keys(errors).length > 0) return;
+
+    console.log("Email login request", InputForm);
+    dispatch(signInWithEmailPassword(InputForm));
+  };
+
+  const handleGooglesignin = () => {
+    dispatch(signInWithGoogle());
+  };
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
     }
-    const handleGooglesignin = () => {
-        dispatch(SingInGoogleAsync());
-    }
-    useEffect(() => {
-        if (user) {
-            navigate("/");
-        }
-    }, [user]);
+  }, [user, navigate]);
     return (
         <>
-            {errMsg ? <p>{errMsg}</p> : ""}
+            {isError ? <p>{isError}</p> : ""}
             <section className="py-5 signin-section">
                 <div className="container">
                     <div className="auth-card row mx-auto align-items-center">
@@ -61,26 +73,28 @@ const SignIn = () => {
                                     <Form.Group className="mb-3">
                                         <Form.Label className="form-label w-100">Enter Email</Form.Label>
                                         <Form.Control
-                                            type="text"
-                                            placeholder="Enter Email"
-                                            name="email"
-                                            onChange={handlechange}
-                                            value={InputForm.email}
-                                        />
-                                        {Error.email && <span className="error">{Error.email}</span>}
-                                    </Form.Group>
+                                        type="email"
+                                        autoComplete="email"
+                                        placeholder="Enter Email"
+                                        name="email"
+                                        onChange={handlechange}
+                                        value={InputForm.email}
+                                    />
+                                    {formErrors.email && <span className="error">{formErrors.email}</span>}
+                                </Form.Group>
 
-                                    <Form.Group className="mb-3">
-                                        <Form.Label className="form-label w-100">Enter Password</Form.Label>
-                                        <Form.Control
-                                            type="password"
-                                            placeholder="Enter password"
-                                            name="password"
-                                            onChange={handlechange}
-                                            value={InputForm.password}
-                                        />
-                                        {Error.password && <span className="error">{Error.password}</span>}
-                                    </Form.Group>
+                                <Form.Group className="mb-3">
+                                    <Form.Label className="form-label w-100">Enter Password</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        autoComplete="current-password"
+                                        placeholder="Enter password"
+                                        name="password"
+                                        onChange={handlechange}
+                                        value={InputForm.password}
+                                    />
+                                    {formErrors.password && <span className="error">{formErrors.password}</span>}
+                                </Form.Group>
 
                                     <Form.Group className="mb-3">
                                         <div className="d-flex justify-content-between align-items-center mb-3">
@@ -90,7 +104,7 @@ const SignIn = () => {
                                             </div>
                                         </div>
 
-                                        <div className="d-grid mb-3">
+                                        <div className="btn-color d-grid mb-3">
                                             <button type="submit" className="btn btn-primary btn-main w-100">SignIn</button>
                                         </div>
 
@@ -107,7 +121,7 @@ const SignIn = () => {
                                         <div className="socials mt-3 d-flex gap-2 justify-content-center">
                                             <button type="button" className="social-btn fb">f</button>
                                             <button type="button" className="social-btn tw">t</button>
-                                            <button type="submit" className="social-btn gg" onClick={handleGooglesignin}>G</button>
+                                            <button type="button" className="social-btn gg" onClick={handleGooglesignin}>G</button>
                                         </div>
                                     </Form.Group>
                                 </Form>

@@ -1,9 +1,6 @@
 .signin-form{
-  /* background-color: rgb(230, 230, 230); */
-  /* padding: 100px; */
   display: inline-block;
 }
-/* Container card */
 .auth-card {
   /* background: #fff; */
   border-radius: 14px;
@@ -13,7 +10,6 @@
   margin-top: 10px;
 }
 
-/* left image */
 .hero-wrap {
   display: flex;
   align-items: center;
@@ -29,7 +25,6 @@
   max-height: 420px;
 }
 
-/* right panel */
 .form-panel {
   padding: 36px 32px;
   background: transparent;
@@ -42,7 +37,6 @@
   color: #222;
 }
 
-/* labels & inputs */
 .form-label {
   display: block;
   font-size: 14px;
@@ -61,7 +55,6 @@
   box-shadow: none;
 }
 
-/* error text */
 .error {
   display: block;
   color: #d93025;
@@ -69,7 +62,6 @@
   margin-top: 6px;
 }
 
-/* remember checkbox */
 .checkbox-wrap {
   display: flex;
   align-items: center;
@@ -77,7 +69,6 @@
   font-size: 14px;
 }
 
-/* primary button like screenshot (soft blue) */
 .btn-main {
   background-color: #63a4ff;
   border-color: #63a4ff;
@@ -87,7 +78,6 @@
   font-weight: 600;
 }
 
-/* "Or login with" divider */
 .or-line {
   display: flex;
   align-items: center;
@@ -104,7 +94,6 @@
   background: #eee;
 }
 
-/* social buttons */
 .socials { justify-content: center; }
 .social-btn {
   width: 36px;
@@ -122,14 +111,12 @@
 .social-btn.tw { background:#1da1f2; color:#fff; }
 .social-btn.gg { background:#db4437; color:#fff; }
 
-/* responsive behavior */
 @media (max-width: 767.98px) {
   .auth-card { border-radius: 10px; }
   .hero-wrap { display: none; } /* hide image on small devices like screenshot central form */
   .form-panel { padding: 24px; }
 }
 
-/* make form full width, stacked inputs */
 .fullwidth-form {
   display: flex;
   flex-direction: column;
@@ -161,7 +148,6 @@
   outline: none;
 }
 
-/* maintain responsive layout */
 @media (max-width: 767.98px) {
   .fullwidth-form {
     padding: 0;

@@ -54,8 +54,8 @@
 }
 
 .signin-btn{
-  background-color: rgb(252, 129, 29) !important; 
-  color: white !important;
+  background-color: rgba(245, 239, 234, 0.747) !important; 
+  color: rgb(73, 72, 72) !important;
   margin: 0px 10px;
 }
 
@@ -72,13 +72,12 @@
   border-radius: 6px;
   text-decoration: none;
 }
-/* User icon dropdown wrapper */
+
 .user-dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* The main user icon */
 .user-icon {
   width: 40px;
   height: 40px;
@@ -97,7 +96,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Dropdown content (hidden by default) */
+
 .user-dropdown-content {
   display: none;
   position: absolute;
@@ -112,12 +111,11 @@
   text-align: left;
 }
 
-/* Show dropdown on hover */
+
 .user-dropdown:hover .user-dropdown-content {
   display: block;
 }
 
-/* User email styling */
 .user-email {
   margin: 0;
   font-size: 0.9rem;
@@ -128,7 +126,7 @@
   margin-bottom: 8px;
 }
 
-/* Logout button inside dropdown */
+
 .logout-btn {
   background-color: #ff4d4d !important;
   color: white !important;
@@ -144,7 +142,6 @@
   background-color: #e63946 !important;
 }
 
-/* Other icons styling */
 .nav-icon {
   font-size: 1.4rem;
   color: #000;

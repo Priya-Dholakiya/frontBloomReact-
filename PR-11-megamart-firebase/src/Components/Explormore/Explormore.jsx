@@ -75,13 +75,13 @@ const Explormore = () => {
                     <div className="slider-container">
                         <Slider {...settings}>
                             <div className="slide">
-                                <img src="./src/image/banner-4.png" alt="slide1" />
+                                <img src="./src/image/banner-6.png" alt="slide1" />
                             </div>
                             <div className="slide">
-                                <img src="./src/image/banner-5.png" alt="slide2" />
+                                <img src="./src/image/banner-1.png" alt="slide2" />
                             </div>
                             <div className="slide">
-                                <img src="./src/image/banner-6.png" alt="slide3" />
+                                <img src="./src/image/banner-3.png" alt="slide3" />
                             </div>
                         </Slider>
                     </div>

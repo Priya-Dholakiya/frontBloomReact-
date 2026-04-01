@@ -16,7 +16,7 @@
     border-radius: 12px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 700px; /* now form won’t be full width */
+    max-width: 700px; 
     background-image: url('https://images.unsplash.com/photo-1616627981246-9f9d7f7bb26e');
     background-size: cover;
     background-position: center;
