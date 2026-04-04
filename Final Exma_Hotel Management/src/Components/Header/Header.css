@@ -1,0 +1,106 @@
+/* Professional Blue Pill Navbar - Centered, Rounded */
+
+.header-wrapper {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background: linear-gradient(180deg, var(--bg-main) 0%, #E2E8F0 100%);
+}
+
+.navbar-pill {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: 50px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1.5rem;
+  backdrop-filter: blur(20px);
+}
+
+.dp-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  letter-spacing: -0.5px;
+}
+
+.nav-menu {
+  gap: 2.5rem !important;
+}
+
+.nav-item {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-item:hover {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-hover));
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.booking-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  font-size: 0.7rem;
+  min-width: 20px;
+  height: 20px;
+}
+
+.user-toggle {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px;
+  border: none !important;
+}
+
+.user-toggle:hover {
+  background: var(--border-light);
+}
+
+.dropdown-menu {
+  border-radius: 15px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+  padding: 0.5rem;
+}
+
+.dropdown-item {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background: var(--accent-primary);
+  color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .navbar-pill {
+    border-radius: 25px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .nav-menu {
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-wrapper {
+    padding-top: 1rem;
+  }
+  
+  .dp-logo {
+    font-size: 1.5rem;
+  }
+}
